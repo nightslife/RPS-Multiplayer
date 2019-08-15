@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors Lizard Spock</title>
+        <link rel="stylesheet" type="text/css" href="assets/style/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-database.js"></script>
+      
+    </head>
+    <body>
+        <div id="newTrainForm">
+        <form>
+            <label>Train Name: </label><input type="text" name="trainName" id="trainName" >
+            <label>Destination: </label><input type="text" name="trainDest" id="trainDest">
+            <label>Next Arrival: </label><input type="text" name="trainTime" id="trainTime">
+            <label>Frequency: </label><input type="text" name="trainFreq" id="trainFreq">
+            <button id="addTrain">Add that train!</button>
+        </form>
+        </div>
+        <div id=trainDisplay></div>
+
+        <script src="assets/javascript/app.js"></script>
+    </body>
+</html>
