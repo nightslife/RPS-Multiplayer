@@ -27,17 +27,19 @@ $("#addTrain").on("click",function(){
     trainTime = $("#trainTime").val().trim()
     trainFreq = parseInt($("#trainFreq").val().trim())
     let trainData = []
-    trainData.push(trainDest, trainTime, trainFreq)
-    database.ref("/"+trainName).set(
-        trainData
-    )
-    $("#trainName").val("")
-    $("#trainDest").val("")
-    $("#trainTime").val("")
-    $("#trainFreq").val("")
+    if((trainName || trainDest || trainTime || trainFreq) !== "")
+        trainData.push(trainDest, trainTime, trainFreq)
+        database.ref("/"+trainName).set(
+            trainData
+        )
+        $("#trainName").val("")
+        $("#trainDest").val("")
+        $("#trainTime").val("")
+        $("#trainFreq").val("")
 })
 
 database.ref().on("value", function(snap){
+
     let trainNames = Object.keys(snap.val())
     console.log(trainNames)
     $("#deleteOnUpdate").remove()
