@@ -51,7 +51,7 @@ database.ref().on("value", function(snap){
         let newTrainDest = $("<td>")
         newTrainDest.text(addTrainRow[0])
         let nextComingTime = $("<td>")
-        nextComingTime.text(timeIncoming(addTrainRow[1],addTrainRow[2]))
+        nextComingTime.text(timeIncoming(addTrainRow[1],addTrainRow[2])+ " minutes")
         newRow.append(newTrainName,newTrainDest,nextComingTime)
         $("#trainTable").append(newRow)
 
